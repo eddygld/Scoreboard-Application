@@ -1,4 +1,5 @@
 import React,{ PureComponent } from 'react'
+import Icon from './Icon'
 import PropTypes from 'prop-types'
 
 import Counter from './Counter'
@@ -30,6 +31,7 @@ class Player extends PureComponent {
         <div className="player">
           <span className="player-name">
             <button className="remove-player" onClick={() => removePlayer(id)}>✖</button>
+            <Icon />
             { name }
           </span>
     
