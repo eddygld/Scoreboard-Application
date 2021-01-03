@@ -64,7 +64,19 @@ class App extends Component {
     });
   }
 
+  getHighScore = () => {
+    const scores = this.state.players.map( player => player.score );
+    const highScore = Math.max(...scores);
+    if(highScore) {
+      return highScore;
+    }
+    return null;
+  }
+
   render() {
+
+    const highScore = this.getHighScore();
+
     return (
       <div className="scoreboard">
         <Header 
@@ -77,6 +89,7 @@ class App extends Component {
           <Player 
             name={player.name}
             score={player.score}
+            isHighScore={ highScore === player.score }
             id={player.id}
             key={player.id.toString()} 
             index= {index}
