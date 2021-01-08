@@ -8,30 +8,15 @@ class App extends Component {
   state = {
     players: [
       {
-        name: "Eddy",
+        name: "John",
         score: 0,
         id: 1
-      },
-      {
-        name: "Brad",
-        score: 0,
-        id: 2
-      },
-      {
-        name: "Mu",
-        score: 0,
-        id: 3
-      },
-      {
-        name: "Westbrook",
-        score: 0,
-        id: 4
       }
     ]
   };
 
   // Player id counter
-  prevPlayerId = 4;
+  prevPlayerId = 1;
 
   handleScoreChange = (index,delta) => {
     this.setState( prevState => {
