@@ -27,6 +27,7 @@ header h1 {
 form {
   display: flex;
   background-color: #2196f3;
+  max-width: 700px;
 }
 
 input[type="text"] {
